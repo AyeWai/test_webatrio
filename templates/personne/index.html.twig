@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Personne{% endblock %}
+
+{% block body %}
+
+<form  method="post" class="form" id="form" action= "{{path('personne_register',)}}">
+
+			<h2 class="form__title">Enregistrer une personne</h2>
+			<input type="string" placeholder="Nom" class="input" name="nom" id="inputNom"  required />  
+			<input type="string" placeholder="Prenom" class="input" name="prenom" id="inputPrenom"  required/>      
+            <input type="date" id="inputDateNaissance" name="datenaissance" required class="input"> 
+
+			<button class="btn" type="submit" >Enregistrer</button>
+
+</form>
+
+<button class="btn" onclick=location.href='{{path('personne_register',)}}'>Enregistrer2</button>
+{% endblock %}

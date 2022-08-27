@@ -1,0 +1,34 @@
+% extends 'base.html.twig' %}
+
+{% block title %}Personne{% endblock %}
+
+{% block body %}
+
+
+<table>
+  <caption>Statement Summary</caption>
+  <thead>
+    <tr>
+      <th scope="col">Account</th>
+      <th scope="col">Due Date</th>
+      <th scope="col">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+  {%for personne in personnes %}
+    <tr>
+      <td data-label="Account">{{ personne.nom }}</td>
+      <td data-label="Due Date">{{ personne.prenom }}</td>
+      <td data-label="Amount">{{ personne.datenaissance|date('d-m-Y')}}</td>
+    </tr>
+  {%endfor%}
+    <tr>
+      <td scope="row" data-label="Account">Testosaure</td>
+      <td data-label="Due Date">03/01/2016</td>
+      <td data-label="Amount">$2,443</td>
+
+    </tr>
+  </tbody>
+</table>
+
+<button class="btn" onclick=loc
